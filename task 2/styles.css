@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(to right bottom, rgb(132, 81, 90), rgb(7, 7, 125));
+}
+
+.container{
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+}
+html {
+    height: 100%;
+}
+input{
+    width: 220px;
+    margin: 5px;
+    padding: 10px 0 10px 0;
+    border: none;
+}
+input[type="text"]:focus{
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.submit{
+    width: 220px;
+    margin: 5px;
+    padding: 10px 0 10px 0;
+    color: rgb(139, 55, 70);
+    font-weight: bold;
+    border: none;
+    background-color: white;
+
+}
+.submit:hover{
+    color:  rgb(7, 7, 125);
+    transition: 0.4s;
+}
+button{
+    width: 220px;
+    margin: 5px;
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+    border: none;
+    background-color: white;
+}
+
+::placeholder{
+    font-style: italic;
+    padding-left: 10px;
+}
+.content{
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+}
+.likes{
+    color: grey;
+}
+.likes:hover{
+    color:black;
+    transition: 0.4s;
+}
+.send{
+    display: flex;
+    flex-direction: row;
+}
+div{
+    background-color: white;
+    color: rgb(0, 0, 0);
+    display: flex;
+    margin: 10px;
+    
+}
+nav{
+    width: 320px;
+    background: linear-gradient(to bottom right, rgb(101, 101, 189), rgb(206, 101, 119));
+    color: white;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+a{
+    color: white;
+    text-decoration: none;
+
+}
+i{
+    text-align: center;
+    padding-bottom: 15px;
+    color:rgb(142, 112, 75);
+}
+.comment{
+    display: flex;
+}
+
+p{
+    text-align: left;
+    color:gray;
+    font-size: 14px;
+    padding: 10px;
+}
+h3{
+    text-align: center;
+    padding: 15px;
+    font-size: medium;
+    font-weight: lighter;
+}
+ul{
+    list-style: none;
+    position: relative;
+  
+}
+
+ul:after{
+    content: '';
+    position: absolute; top: 0px; left: 4px;
+    width: 1px;
+    height: 100%;
+    background: white;      
+}
+ul > li{
+    padding-left: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    margin: 10px 0;
+}
+ul > li:before{
+    content: '';
+    position: absolute; top: 5px; left: 0;
+    width: 9px;
+    height: 9px;
+    background: white; 
+    border-radius: 50%;    
+}
