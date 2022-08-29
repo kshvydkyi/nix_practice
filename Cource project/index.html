@@ -42,18 +42,18 @@
             <div>
                 <img src="./assets/images/Хобби Арт 4 1.png" width = "121.75px" height ="61.65px">
             </div>
-            <form class="search-container">
+            <form class="search-container" id="search">
                 <input type="text" id="search-bar" placeholder="Пошук товарів">
-                <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+                <a id="search-button"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
               </form>
             
-            <button>
+            <button onclick="inProgress()">
                 <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.3125 12.125C1.3125 12.125 0.375 12.125 0.375 11.1875C0.375 10.25 1.3125 7.4375 6 7.4375C10.6875 7.4375 11.625 10.25 11.625 11.1875C11.625 12.125 10.6875 12.125 10.6875 12.125H1.3125ZM6 6.5C6.74592 6.5 7.46129 6.20368 7.98874 5.67624C8.51618 5.14879 8.8125 4.43342 8.8125 3.6875C8.8125 2.94158 8.51618 2.22621 7.98874 1.69876C7.46129 1.17132 6.74592 0.875 6 0.875C5.25408 0.875 4.53871 1.17132 4.01126 1.69876C3.48382 2.22621 3.1875 2.94158 3.1875 3.6875C3.1875 4.43342 3.48382 5.14879 4.01126 5.67624C4.53871 6.20368 5.25408 6.5 6 6.5Z" fill="#976464"/>
                 </svg>                    
                   Вхід
                 </button>
-            <button>
+            <button onclick="inProgress()">
                 <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12.8334 1.97111C12.3123 0.90167 10.8111 0.0266703 9.06503 0.536115C8.23065 0.777124 7.50267 1.29398 7.00003 2.00223C6.49739 1.29398 5.76941 0.777124 4.93503 0.536115C3.18503 0.0344481 1.68781 0.90167 1.1667 1.97111C0.435585 3.46834 0.738919 5.15223 2.06892 6.97612C3.11114 8.40334 4.60059 9.85 6.76281 11.53C6.83114 11.5833 6.91532 11.6122 7.00197 11.6122C7.08863 11.6122 7.17281 11.5833 7.24114 11.53C9.39947 9.85389 10.8928 8.41889 11.935 6.97612C13.2611 5.15223 13.5645 3.46834 12.8334 1.97111Z" fill="#976464"/>
                 </svg>                    
@@ -63,22 +63,24 @@
             </button>
         </nav>
         <div class="slider">
-            <img src="./assets/images/threads.png">
+            <div style="width: 570px">
+            <img id="sliderImage" src="./assets/images/threads.png" widht="470" height="450">
+        </div>
             <div class="slider_text">
             <h2>Пряжа Macrametr</h2>
             <p>Повсякденна практика показує, 
                 що зміцнення та розвиток внутрішньої структури 
                 забезпечує широкому колу (фахівців) участь у формуванні форм впливу.</p>
-            <button>У каталог</button>
+            <button id="to_items">У каталог</button>
         </div>
             <div class="arrow-block">
-                <button class="arrow">
+                <button class="arrow" id="arrowPrewious">
                     <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.75008 1.5C9.75065 1.79206 9.64893 2.0751 9.46258 2.29999L3.86258 9L9.26258 15.7125C9.36641 15.8404 9.44395 15.9875 9.49074 16.1454C9.53753 16.3033 9.55265 16.4689 9.53523 16.6327C9.5178 16.7965 9.46818 16.9552 9.38921 17.0998C9.31025 17.2443 9.20349 17.3718 9.07508 17.475C8.94722 17.5788 8.8001 17.6564 8.64218 17.7032C8.48425 17.7499 8.31864 17.7651 8.15485 17.7476C7.99107 17.7302 7.83234 17.6806 7.6878 17.6016C7.54325 17.5227 7.41574 17.4159 7.31258 17.2875L1.27508 9.7875C1.09123 9.56383 0.990723 9.28328 0.990723 8.99375C0.990723 8.70422 1.09123 8.42366 1.27508 8.2L7.52508 0.699997C7.63002 0.573423 7.75889 0.468794 7.90433 0.392105C8.04976 0.315414 8.2089 0.268167 8.37262 0.253073C8.53634 0.237978 8.70143 0.255333 8.85843 0.304138C9.01544 0.352943 9.16127 0.432241 9.28758 0.537495C9.43097 0.653812 9.54682 0.800451 9.62679 0.966873C9.70675 1.13329 9.74886 1.31536 9.75008 1.5Z" fill="#976464"/>
                     </svg>
                     </button>
-                <p>1/5</p>
-                <button class="arrow">
+                <p class="counter"></p>
+                <button class="arrow" id="arrowNext">
                     <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.249918 16.5C0.249347 16.2079 0.351066 15.9249 0.537417 15.7L6.13742 9L0.737418 2.2875C0.633586 2.15964 0.556046 2.01252 0.509256 1.8546C0.462466 1.69668 0.44735 1.53106 0.464773 1.36728C0.482198 1.20349 0.531818 1.04476 0.610785 0.900218C0.689753 0.755672 0.796509 0.628157 0.924917 0.525004C1.05278 0.421172 1.1999 0.343633 1.35782 0.296843C1.51575 0.250053 1.68136 0.234936 1.84515 0.25236C2.00893 0.269784 2.16766 0.319406 2.3122 0.398373C2.45675 0.47734 2.58426 0.584096 2.68742 0.712504L8.72492 8.2125C8.90877 8.43617 9.00928 8.71672 9.00928 9.00625C9.00928 9.29578 8.90877 9.57634 8.72492 9.8L2.47492 17.3C2.36998 17.4266 2.24111 17.5312 2.09567 17.6079C1.95024 17.6846 1.7911 17.7318 1.62738 17.7469C1.46366 17.762 1.29857 17.7447 1.14157 17.6959C0.984562 17.6471 0.838728 17.5678 0.712418 17.4625C0.569026 17.3462 0.453183 17.1995 0.373215 17.0331C0.293246 16.8667 0.251139 16.6846 0.249918 16.5Z" fill="#976464"/>
                     </svg>
@@ -112,63 +114,149 @@
             <div>
                 <fieldset>
                     <legend>Тип Виробу</legend>
-                    <div><input type="checkbox" value="Twine, cords, ropes" id="TCR">
-                        <label for="Type">Шпагат, шнури, мотузки</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="Twine, cords, ropes" id="TCR">
+                            <span></span>
+                            Шпагат, шнури, мотузки
+                        </label>
+                        </div>
                     
-                    <div><input type="checkbox" value="Rings, beads" id="RB">
-                        <label for="Type">Кільця, намистини</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="Rings, beads" id="RB">
+                            <span></span>
+                            Кільця, намистини
+                        </label>
+                    </div>
 
-                    <div><input type="checkbox" value="Jute" id="J">
-                        <label for="Type">Джут</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="Jute" id="J">
+                            <span></span>
+                            Джут
+                        </label>
+                    </div>
                     
                 </fieldset>
                 <fieldset>
                     <legend>Cклад</legend>
-                    <div><input type="checkbox" value="Cotton" id="CT">
-                        <label for="Type">Бавовна</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="Cotton" id="CT">
+                            <span></span>
+                            Бавовна
+                        </label>
+                    </div>
                     
-                    <div><input type="checkbox" value="Synthetics" id="STH">
-                        <label for="Type">Синтетика</label></div>
+                    <div>
+                       
+                        <label>
+                            <input type="checkbox" value="Synthetics" id="STH">
+                            <span></span>
+                            Синтетика
+                        </label>
+                    </div>
 
-                    <div><input type="checkbox" value="Core" id="CR">
-                        <label for="Type">Із сердечником</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="Core" id="CR">
+                            <span></span>
+                            Із сердечником
+                        </label>
+                    </div>
                     
                 </fieldset>
                 <fieldset>
                     <legend>Діаметр</legend>
-                    <div><input type="checkbox" value="3mm" id="3mm">
-                        <label for="Type">3 мм</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="3mm" id="3mm">
+                            <span></span>
+                            3 мм
+                        </label>
+                    </div>
                     
-                    <div><input type="checkbox" value="4mm" id="4mm">
-                        <label for="Type">4 мм</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="4mm" id="4mm">
+                            <span></span>
+                            4 мм
+                        </label>
+                    </div>
 
-                    <div><input type="checkbox" value="4,5mm" id="4,5mm">
-                        <label for="Type">4.5 мм</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="4,5mm" id="4,5mm">
+                            <span></span>
+                            4.5 мм
+                        </label>
+                    </div>
 
-                    <div><input type="checkbox" value="5mm" id="5mm">
-                        <label for="Type">5 мм</label></div>
+                    <div>
+                       
+                        <label>
+                            <input type="checkbox" value="5mm" id="5mm">
+                            <span></span>
+                            5 мм
+                        </label>
+                    </div>
                     
                 </fieldset>
                 <fieldset>
                     <legend>Виробник</legend>
-                    <div><input type="checkbox" value="Macrametr" id="MCR">
-                        <label for="Type">Macrametr</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="Macrametr" id="MCR">
+                            <span></span>
+                            Macrametr
+                        </label>
+                    </div>
                     
-                    <div><input type="checkbox" value="Zefirka" id="ZFR">
-                        <label for="Type">Зефірка</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="Zefirka" id="ZFR">
+                            <span></span>
+                            Зефірка
+                        </label>
+                    </div>
 
-                    <div><input type="checkbox" value="Gamma" id="GM">
-                        <label for="Type">Гамма</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="Gamma" id="GM">
+                            <span></span>
+                            Гамма
+                        </label>
+                    </div>
 
-                    <div><input type="checkbox" value="Sibshnur" id="SBH">
-                        <label for="Type">Сібшнур</label></div>
+                    <div>
+                        
+                        <label>
+                            <input type="checkbox" value="Sibshnur" id="SBH">
+                            <span></span>
+                            Сібшнур
+                        </label>
+                    </div>
                     
                 </fieldset>
-                <button>Показати</button>
-                <button>Очистити</button>
+                <div class="buttons">
+                <button onclick="inProgress()">Показати</button>
+                <button onclick="inProgress()">Очистити</button>
+            </div>
             </div>
             <div class="goods" id="list_wares">
-                <div class="ware" data-price="332">
+                <div class="ware" data-price="332" name="Шпагат Macrametr 4 мм 100 ниток">
                     <div>
                         <div class="product__quantity" style="display:none"></div>
                     <a href="#">
@@ -182,7 +270,7 @@
                             </defs>
                         </svg>
                     </a>
-                    <a href="#">
+                    <a  href="./item.html">
                         <svg width="22" height="6" viewBox="0 0 22 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="2.78261" cy="2.78261" r="2.78261" fill="url(#paint0_linear_111_778)"/>
                             <circle cx="10.6674" cy="2.78261" r="2.78261" fill="url(#paint1_linear_111_778)"/>
@@ -204,7 +292,7 @@
                         </svg>
                     </a>
                 </div>
-                    <a href="./item.html"><img src="./assets/images/marcametr1.png" alt="macrametr" width="200px" height ="149.6px"></a>
+                    <a><img src="./assets/images/marcametr1.png" alt="macrametr" width="200px" height ="149.6px"></a>
                     <p>Шпагат Macrametr 4 мм, 100 ниток</p>
                     <img src="./assets/images/1colors.png" alt="1colors" width="97px" height ="20px" style="margin-left: 30px; margin-top: 15px">
                     <p><strong id="price">332$</strong></p>
@@ -220,7 +308,7 @@
                         У кошик   
                     </button>
                 </div>
-                <div class="ware" data-price="385">
+                <div class="ware" data-price="385" name="Шпагат джутовий Сибшнур 500 м">
                     <div>
                         <div class="product__quantity" style="display:none"></div>
                         <a href="#">
@@ -234,7 +322,7 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="./item.html">
                             <svg width="22" height="6" viewBox="0 0 22 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="2.78261" cy="2.78261" r="2.78261" fill="url(#paint0_linear_111_778)"/>
                                 <circle cx="10.6674" cy="2.78261" r="2.78261" fill="url(#paint1_linear_111_778)"/>
@@ -274,7 +362,7 @@
                         </button>
 
                 </div>
-                <div class="ware" data-price="1092">
+                <div class="ware" data-price="1092" name="Пряжа Arachna Macrame MAXI">
                     <div>
                         <div class="product__quantity" style="display:none"></div>
                         <a href="#">
@@ -288,7 +376,7 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="./item.html">
                             <svg width="22" height="6" viewBox="0 0 22 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="2.78261" cy="2.78261" r="2.78261" fill="url(#paint0_linear_111_778)"/>
                                 <circle cx="10.6674" cy="2.78261" r="2.78261" fill="url(#paint1_linear_111_778)"/>
@@ -328,7 +416,7 @@
                         </button>
 
                 </div>
-                <div class="ware" data-price="1053">
+                <div class="ware" data-price="1053" name="Пряжа Arachna Macrame MINI">
                     <div>
                         <div class="product__quantity" style="display:none"></div>
                         <a href="#">
@@ -342,7 +430,7 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a  href="./item.html">
                             <svg width="22" height="6" viewBox="0 0 22 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="2.78261" cy="2.78261" r="2.78261" fill="url(#paint0_linear_111_778)"/>
                                 <circle cx="10.6674" cy="2.78261" r="2.78261" fill="url(#paint1_linear_111_778)"/>
@@ -382,7 +470,7 @@
                         </button>
 
                 </div>
-                <div class="ware" data-price="852">
+                <div class="ware" data-price="852" name="Шнур Gamma 0.8 мм 50 м">
                     <div>
                         <a href="#">
                             <div class="product__quantity" style="display:none"></div>
@@ -396,7 +484,7 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a  href="./item.html">
                             <svg width="22" height="6" viewBox="0 0 22 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="2.78261" cy="2.78261" r="2.78261" fill="url(#paint0_linear_111_778)"/>
                                 <circle cx="10.6674" cy="2.78261" r="2.78261" fill="url(#paint1_linear_111_778)"/>
@@ -436,7 +524,7 @@
                         </button>
 
                 </div>
-                <div class="ware" data-price="617">
+                <div class="ware" data-price="617" name="Мотузка Зефірка 4 мм 100 м">
                     <div>
                         <a href="#"> 
                             <div class="product__quantity" style="display:none"></div>
@@ -450,7 +538,7 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a href="#"> 
+                        <a href="./item.html"> 
                             <svg width="22" height="6" viewBox="0 0 22 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="2.78261" cy="2.78261" r="2.78261" fill="url(#paint0_linear_111_778)"/>
                                 <circle cx="10.6674" cy="2.78261" r="2.78261" fill="url(#paint1_linear_111_778)"/>
